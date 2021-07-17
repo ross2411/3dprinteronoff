@@ -1,0 +1,2 @@
+Flask[async]==2.0.1
+meross_iot==0.4.0.6.post3
