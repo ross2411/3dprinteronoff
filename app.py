@@ -18,7 +18,7 @@ async def onOff():
     await meross_client.onOff()
     return render_template('Index.html')
     
-@app.route("/turnoff-3d-printer")
+@app.route("/turnoff-3d-printer",methods = ['GET', 'POST'])
 async def turnOff3dPrinter():
     await meross_client.turnOff3DPrinter()
     return "success"
