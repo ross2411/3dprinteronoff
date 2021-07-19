@@ -16,9 +16,13 @@ def index():
 @app.route("/on-off")
 async def onOff():
     await meross_client.onOff()
-    return render_template('OnOff.html')
+    return render_template('Index.html')
     
-    
+@app.route("/turnoff-3d-printer")
+async def turnOff3dPrinter():
+    await meross_client.turnOff3DPrinter()
+    return "success"
+
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0')
